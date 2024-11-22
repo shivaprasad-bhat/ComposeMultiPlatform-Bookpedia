@@ -8,12 +8,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
+import com.svbneelmane.bookpedia.book.presentation.book_list.BookListScreen
+import com.svbneelmane.bookpedia.book.presentation.book_list.BookListState
+import com.svbneelmane.bookpedia.book.presentation.book_list.booksMock
 import com.svbneelmane.bookpedia.book.presentation.book_list.components.BookSearchBar
 
-@Preview
-@PreviewLightDark
+//@Preview
+//@PreviewLightDark
 @Composable
 private fun BookPreview() {
     Box(
@@ -29,4 +31,17 @@ private fun BookPreview() {
             modifier = Modifier.fillMaxWidth()
         )
     }
+}
+
+
+@Preview
+@Composable
+private fun BookListScreenPreview() {
+    BookListScreen(
+        state = BookListState(
+            searchResults = booksMock,
+        ),
+        onAction = {}
+    )
+
 }

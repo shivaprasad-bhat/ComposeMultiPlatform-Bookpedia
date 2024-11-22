@@ -30,6 +30,16 @@ import com.svbneelmane.bookpedia.core.presentation.DesertWhite
 import com.svbneelmane.bookpedia.core.presentation.SandYellow
 import org.jetbrains.compose.resources.stringResource
 
+/**
+ * Common composable for Search Bar UI
+ * This is the composable that returns the Search Bar UI for books home screen
+ * @param searchQuery [String]
+ * @param onSearchQueryChange [function]
+ * @param onImeSearch [function]
+ * @param modifier [Modifier]
+ *
+ * @created by shivaprasad-bhat on 22-Nov-2024
+ */
 @Composable
 fun BookSearchBar(
     searchQuery: String,
@@ -71,6 +81,7 @@ fun BookSearchBar(
                 keyboardType = KeyboardType.Text,
                 imeAction = ImeAction.Search
             ),
+            // X Icon at the end
             trailingIcon = {
                 AnimatedVisibility(
                     visible = searchQuery.isNotBlank()
