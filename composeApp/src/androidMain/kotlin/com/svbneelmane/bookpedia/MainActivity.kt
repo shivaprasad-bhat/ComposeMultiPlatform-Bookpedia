@@ -7,7 +7,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
 /**
- * Doc comment added
+ * Main Activity of the application
+ * Application entry point
+ * @created by shivaprasad-bhat on 21-Nov-2024
  */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
