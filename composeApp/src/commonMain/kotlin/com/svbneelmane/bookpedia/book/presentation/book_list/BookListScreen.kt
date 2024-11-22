@@ -86,7 +86,7 @@ fun BookListScreen(
     state: BookListState,
     onAction: (BookListAction) -> Unit
 ) {
-    val keyboardContrller = LocalSoftwareKeyboardController.current
+    val keyboardController = LocalSoftwareKeyboardController.current
 
     val pagerState = rememberPagerState { 2 }
 
@@ -119,7 +119,7 @@ fun BookListScreen(
                 onAction(BookListAction.OnSearchQueryChange(it))
             },
             onImeSearch = {
-                keyboardContrller?.hide()
+                keyboardController?.hide()
             },
             modifier = Modifier.widthIn(max = 400.dp).fillMaxWidth().padding(16.dp)
         )
