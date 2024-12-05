@@ -9,9 +9,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.svbneelmane.bookpedia.book.domain.Book
 import com.svbneelmane.bookpedia.book.presentation.book_list.BookListScreen
 import com.svbneelmane.bookpedia.book.presentation.book_list.BookListState
-import com.svbneelmane.bookpedia.book.presentation.book_list.booksMock
 import com.svbneelmane.bookpedia.book.presentation.book_list.components.BookSearchBar
 
 //@Preview
@@ -44,4 +44,20 @@ private fun BookListScreenPreview() {
         onAction = {}
     )
 
+}
+
+private val booksMock = (1..50).map {
+    Book(
+        id = it.toString(),
+        title = "Book $it",
+        imageUrl = "https://test.com",
+        authors = listOf("Shivaprasad"),
+        description = "Description $it",
+        languages = emptyList(),
+        firstPublishedYear = null,
+        averageRating = 4.78,
+        ratingCount = 5,
+        numPages = 20,
+        numEditions = 3
+    )
 }
